@@ -73,7 +73,7 @@ for idx, row in nsb_df.iterrows():
 
 result_df = pd.DataFrame(results)
 # Create copy of original dataframe and add new columns
-nsb_file_copy = nsb_file.copy()
+nsb_file_copy = nsb_df.copy()
 nsb_file_copy['expiry_date'] = result_df['expiry_date'].values
 nsb_file_copy['matched_description'] = result_df['matched_description'].values
 nsb_file_copy['match_score'] = result_df['match_score'].values
@@ -144,4 +144,4 @@ nsb_file_enhanced['matched_description'] = enhanced_result_df['matched_descripti
 nsb_file_enhanced['match_score'] = enhanced_result_df['match_score'].values
 
 print("Enhanced matching results:")
-print(nsb_file_enhanced[['new_column', 'matched_description', 'match_score', 'expiry_date']])
+print(nsb_file_enhanced[['new_column', 'matched_description', 'match_score', 'expiry_date']])"""
